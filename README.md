@@ -5,6 +5,15 @@
 **End the session.**
 **Collapse the workspace.**
 
+<p align="center">
+  <a href="https://aaruvibuilds.github.io/aaruvi-builds-logout-series-03/">
+    <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-7B5CFF?style=for-the-badge&logoColor=white" alt="Live Demo">
+  </a>
+  <a href="https://github.com/aaruvibuilds/aaruvi-builds-logout-series-03">
+    <img src="https://img.shields.io/badge/💻%20SOURCE%20CODE-17151B?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
+  </a>
+</p>
+
 ---
 
 ## ⏻ The Build
@@ -13,7 +22,7 @@
 
 Instead of treating logout as a simple button action, the interface visually **collapses the active workspace into a focused session-ending moment**.
 
-The interaction moves through three visual states:
+The interaction moves through a simple visual sequence:
 
 ```text
 ACTIVE SESSION
@@ -52,7 +61,7 @@ The dashboard includes:
 * Storage usage
 * Logout control
 
-The interface starts in the:
+The system starts in the:
 
 **ACTIVE SESSION**
 
@@ -62,58 +71,61 @@ state.
 
 ### 02 — Initiating Logout
 
-Clicking the **Logout** button begins the session-ending sequence.
+Clicking the **Logout** button starts the session-ending sequence.
 
-The interface immediately starts transitioning away from the active workspace.
+The interface immediately begins transitioning away from the active workspace.
 
-The logout control changes visually while the workspace begins to lose focus.
+The logout control changes visually while the workspace starts losing focus.
 
-At the same time, the interface introduces the central:
+At the same time, the central session-ending experience appears.
+
+The interface enters:
 
 **ENDING SESSION**
-
-stage.
 
 ---
 
 ### 03 — Workspace Collapse
 
-The dashboard does not simply disappear.
+The dashboard doesn't simply disappear.
 
-Instead:
+Instead, the workspace visually collapses.
 
-* The profile moves upward
-* The profile pill pulls away
-* Dashboard cards shift and fade
-* The workspace scales down
-* The active interface loses focus
-* The central session-ending visual becomes the focus
+The transition combines:
 
-At the center is the user's avatar surrounded by a collapsing ring.
+* Profile movement
+* Profile pill movement
+* Dashboard scaling
+* Card exit animations
+* Opacity changes
+* Blur
+* Central visual reveal
 
-The result creates the feeling of the entire workspace being pulled into a single point before the session ends.
+The workspace moves away while the central session-ending visual becomes the focus.
 
 ---
 
 ### 04 — Ending Session
 
-The central transition displays:
+At the center of the interface is the user's avatar surrounded by a circular ring.
+
+The experience displays:
 
 ```text
 ENDING SESSION
 ```
 
-The avatar briefly becomes the visual focus while the surrounding ring expands and then contracts.
+The avatar becomes the visual focus while the surrounding ring expands and then collapses.
 
-The workspace disappears behind it.
+The workspace fades away behind it.
 
-This creates a clear visual bridge between:
+This creates a visual bridge between:
 
 ```text
 ACTIVE WORKSPACE
 ```
 
-and
+and:
 
 ```text
 SESSION ENDED
@@ -129,9 +141,9 @@ After the collapse sequence completes, the interface reaches its final state:
 
 > Welcome back when you're ready.
 
-The dashboard has completely transitioned away.
+The workspace has completely transitioned away.
 
-A dedicated entry control is presented:
+A dedicated action is presented:
 
 **Enter workspace**
 
@@ -141,7 +153,7 @@ A dedicated entry control is presented:
 
 The experience doesn't require a page refresh.
 
-Clicking **Enter workspace** reverses the transition.
+Clicking **Enter workspace** restores the interface.
 
 The signed-out screen fades away while:
 
@@ -161,16 +173,16 @@ The interaction can therefore be experienced repeatedly.
 
 ## ✨ Interaction System
 
-| State           | Behaviour                            |
+| State / Action  | Behaviour                            |
 | --------------- | ------------------------------------ |
 | `active`        | Workspace active                     |
-| `ending`        | Logout / collapse sequence           |
+| `ending`        | Logout and collapse sequence         |
 | `signed-out`    | Session ended                        |
 | Logout button   | Starts session-ending transition     |
 | Enter workspace | Restores workspace                   |
 | Escape key      | Returns to workspace when signed out |
 
-## The JavaScript manages the application state and timed transition sequence.
+The JavaScript manages the application state and timed transition sequence.
 
 ---
 
@@ -179,6 +191,7 @@ The interaction can therefore be experienced repeatedly.
 The visual system combines several small interactions:
 
 * Logout button feedback
+* Logout button state transition
 * Profile exit movement
 * Profile pill movement
 * Dashboard scaling
@@ -193,11 +206,12 @@ The visual system combines several small interactions:
 * Login mark reveal
 * Content entrance animation
 * Enter workspace transition
+* Dashboard restoration
 * Card staggered restoration
 * Hover feedback
-* Active/focus-visible states
+* Focus-visible states
 
-## The CSS also includes responsive behaviour and reduced-motion support.
+The CSS also includes responsive behaviour and reduced-motion support.
 
 ---
 
@@ -221,7 +235,7 @@ signed-out
 active
 ```
 
-Instead of controlling every visual element independently, JavaScript changes the application state while CSS handles the animation and visual choreography.
+Instead of controlling every animation individually, JavaScript changes the application state while CSS handles the visual choreography.
 
 This keeps the interaction lightweight and easy to understand.
 
@@ -292,7 +306,7 @@ The active workspace contains a lightweight personal workspace interface.
 └──────────────────────────────────────────┘
 ```
 
-The dashboard provides enough visual structure to make the logout interaction feel like a transition from a real workspace.
+The dashboard provides enough visual structure to make the logout interaction feel like a transition from an active workspace.
 
 ---
 
@@ -309,13 +323,12 @@ The defining visual element of Series 03 is the session-ending collapse.
                     ↓
               ENDING SESSION
                     ↓
-                  SESSION
-                  ENDED
+               SESSION ENDED
 ```
 
 The avatar and ring become the visual focus while the workspace recedes.
 
-This creates a more cinematic logout transition without requiring additional assets or external libraries.
+The result is a focused transition from an active digital workspace into a completed session.
 
 ---
 
@@ -330,8 +343,8 @@ The responsive system includes:
 * Hidden secondary session information
 * Responsive profile composition
 * Responsive dashboard cards
-* Two-column mobile card layout
-* Single-column layout on smaller screens
+* Two-column card layout on smaller screens
+* Single-column card layout on very small screens
 * Smaller avatar composition
 * Mobile-friendly logout control
 
@@ -400,7 +413,7 @@ No dependencies required.
 
 ### Try the interaction
 
-[**https://aaruvibuilds.github.io/aaruvi-builds-logout-series-03/**](https://aaruvibuilds.github.io/aaruvi-builds-logout-series-03/)
+[**🚀 Open Live Demo**](https://aaruvibuilds.github.io/aaruvi-builds-logout-series-03/)
 
 Click **Logout** and watch the workspace collapse into the session-ending sequence.
 
@@ -412,9 +425,9 @@ Then click **Enter workspace** to restore the interface.
 
 The complete source code used for this build is available on GitHub.
 
-**Repository:**
+### Repository
 
-https://github.com/aaruvibuilds/aaruvi-builds-logout-series-03
+[**💻 View Source Code**](https://github.com/aaruvibuilds/aaruvi-builds-logout-series-03)
 
 ---
 
@@ -426,7 +439,7 @@ A logout interaction doesn't have to feel like:
 CLICK → DISAPPEAR
 ```
 
-It can become a complete visual transition:
+It can communicate a complete visual transition:
 
 ```text
 ACTION
@@ -456,9 +469,11 @@ Building modern web experiences through:
 
 ### Follow the journey
 
-**Instagram:** @aaruvi_builds
-**YouTube:** @AaruviBuilds
-**GitHub:** @aaruvibuilds
+**Instagram:** [@aaruvi_builds](https://www.instagram.com/aaruvi_builds)
+
+**YouTube:** [@AaruviBuilds](https://www.youtube.com/@AaruviBuilds)
+
+**GitHub:** [@aaruvibuilds](https://github.com/aaruvibuilds)
 
 ---
 
