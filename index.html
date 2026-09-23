@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaruvi Builds — Logout 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="scene">
+    <div class="series-label">AARUVI BUILDS</div>
+
+    <section class="window" id="window">
+      <header class="nav">
+        <div class="identity">
+          <div class="logo">A</div>
+          <div class="identity-copy">
+            <span>Workspace</span>
+            <strong>Studio</strong>
+          </div>
+        </div>
+
+        <div class="session">
+          <span class="session-dot"></span>
+          ACTIVE SESSION
+        </div>
+
+        <button class="logout" id="logout" type="button" aria-label="Log out">
+          <span>Logout</span>
+          <span class="logout-icon">↗</span>
+        </button>
+      </header>
+
+      <div class="dashboard" id="dashboard">
+        <div class="hero">
+          <div class="profile">
+            <div class="avatar">YP</div>
+            <div>
+              <span class="kicker">Personal workspace</span>
+              <h1>Your space,<br><em>your flow.</em></h1>
+            </div>
+          </div>
+
+          <div class="profile-pill">
+            <span class="pill-avatar">YP</span>
+            <span>Yoga Prabu</span>
+            <b>•••</b>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="card card-large">
+            <span class="kicker">Overview</span>
+            <strong>08</strong>
+            <small>active projects</small>
+            <div class="mini-line"><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+
+          <article class="card">
+            <span class="kicker">Team</span>
+            <strong>14</strong>
+            <small>members online</small>
+          </article>
+
+          <article class="card">
+            <span class="kicker">Storage</span>
+            <strong>72%</strong>
+            <small>workspace used</small>
+          </article>
+        </div>
+      </div>
+
+      <div class="collapse-stage" id="collapseStage" aria-hidden="true">
+        <div class="collapse-center">
+          <div class="collapse-avatar">YP</div>
+          <div class="collapse-ring"></div>
+          <span class="collapse-label">ENDING SESSION</span>
+        </div>
+      </div>
+
+      <div class="signed-out" id="signedOut" aria-live="polite">
+        <div class="login-mark">
+          <span></span>
+        </div>
+        <span class="kicker">Session ended</span>
+        <h2>Welcome back<br><em>when you're ready.</em></h2>
+        <button class="again" id="again" type="button">Enter workspace</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
